@@ -16,4 +16,57 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_rotate" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/lottoNum1"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+
+        <Button
+            android:id="@+id/lottoNum2"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+
+        <Button
+            android:id="@+id/lottoNum3"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+
+        <Button
+            android:id="@+id/lottoNum4"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+
+        <Button
+            android:id="@+id/lottoNum5"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+
+        <Button
+            android:id="@+id/lottoNum6"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
