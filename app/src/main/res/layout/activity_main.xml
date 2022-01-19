@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/runButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintBottom_toTopOf="@+id/runButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,6 +32,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
 
         <Button
@@ -39,6 +40,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
 
         <Button
@@ -46,6 +48,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
 
         <Button
@@ -53,6 +56,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
 
         <Button
@@ -60,6 +64,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
 
         <Button
@@ -67,6 +72,7 @@
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
+            android:textSize="24sp"
             app:cornerRadius="80dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
