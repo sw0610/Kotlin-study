@@ -7,8 +7,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    private val random= Random()
+    private val numbers = arrayListOf<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,23 +26,44 @@ class MainActivity : AppCompatActivity() {
         val num6= findViewById<Button>(R.id.lottoNum6)
 
         findViewById<FloatingActionButton>(R.id.runButton).setOnClickListener {
-            num1.text="45"
-            num1.backgroundTintList= ColorStateList.valueOf(Color.rgb(255,0,0))
-
-            num2.text="26"
-            num2.backgroundTintList= ColorStateList.valueOf(Color.rgb(0,255,0))
-
-            num3.text="2"
-            num3.backgroundTintList= ColorStateList.valueOf(Color.rgb(0,0,255))
-
-            num4.text="14"
-            num4.backgroundTintList= ColorStateList.valueOf(Color.rgb(255,255,0))
-
-            num5.text="30"
-            num5.backgroundTintList= ColorStateList.valueOf(Color.rgb(255,0,255))
-
-            num6.text="18"
-            num6.backgroundTintList= ColorStateList.valueOf(Color.rgb(0,255,255))
+            setLottoNum(num1)
+            setLottoNum(num2)
+            setLottoNum(num3)
+            setLottoNum(num4)
+            setLottoNum(num5)
+            setLottoNum(num6)
         }
+    }
+
+    private fun setLottoNum(lottoNum: Button){
+        var num=0
+
+        while(true) {
+            num = random.nextInt(45) + 1
+            if (!numbers.contains(num)) {
+                numbers.add(num)
+                break
+            }
+        }
+
+        lottoNum.text="${num}"
+
+        if(num<=10){
+            lottoNum.backgroundTintList=ColorStateList.valueOf(Color.rgb(255, 255, 0))
+        }
+        else if (num<=20){
+            lottoNum.backgroundTintList=ColorStateList.valueOf(Color.rgb(0, 0, 255))
+        }
+        else if (num<=30){
+            lottoNum.backgroundTintList=ColorStateList.valueOf(Color.rgb(255, 0, 0))
+        }
+        else if (num<=40){
+            lottoNum.backgroundTintList=ColorStateList.valueOf(Color.rgb(80, 80, 80))
+        }
+        else{
+            lottoNum.backgroundTintList=ColorStateList.valueOf(Color.rgb(0, 255, 0))
+        }
+
+
     }
 }
